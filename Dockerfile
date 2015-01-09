@@ -1,5 +1,7 @@
 FROM debian:jessie
 
+RUN apt-get update && apt-get install -y curl
+
 COPY consul /usr/local/bin/
 COPY dist/ /dist
 
